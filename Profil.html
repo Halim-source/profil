@@ -1,0 +1,458 @@
+<!--
+-----------------
+https://github.com/ardacarofficial/links-website is open source project.
+-----------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Description - ALA-ALA JI</title>
+    <meta name="description" content="Your Description">
+<style>
+/* From the :root element you can easily change the colors of the design, its size and so on. */
+:root {
+
+  /* You can change the font family in the whole design here. (You need to add the font family to the codes.) */
+  --font_family: 'Inter', sans-serif;
+
+  /* You can change the font size here, is proportional to all texts. */
+  --font_size: 16px;
+
+  /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
+  --background_color: black;
+  --background_image: url("../img/wallpaper.jpg");
+
+  /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
+  --image_border_color: #000;
+  --image_border_px: 3px;
+
+  /* You can change the width and size of the picture by typing the number of pixels. */
+  --image_width: 140px;
+  --image_height: 140px;
+
+  /* You can change the colors of the title and description section by typing the color codes. */
+  --title_color: #fff;
+  --description_color: #f1c40f;
+
+  /* You can change the colors of social media icons by changing the color code. */
+  --svg_color: #fff;
+
+  /* You can change the background, text color and active color of the menu by changing the color codes. */
+  --menu_background_color: #black;
+  --menu_text_color: #fff;
+  --menu_active_text_color: #f1c40f;
+
+  /* You can change the button's background, text color and active color by changing the color codes. */
+  --button_background_color: #0e0e0e;
+  --button_text_color: #fff;
+  --button_text_hover_color: #f1c40f;
+
+  /* You can change the background, text color and active color of the text field by changing the color codes. */
+  --textarea_background_color: #0e0e0e;
+  --textarea_text_color: #fff;
+  --textarea_link_text_color: #f1c40f;
+
+  /* You can change the background, text color and active color of the footer area by changing the color codes. */
+  --footer_background_color: #0e0e0e;
+  --footer_text_color: #fff;
+  --footer_link_text_color: #f1c40f;
+}
+
+  body {
+  font: var(--font_size) var(--font_family);
+  font-weight: 400;
+  line-height: 1.5;
+  background: var(--background_color) var(--background_image) no-repeat center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_row_center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_no_wrap_row_center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo, Title and Description Codes */
+
+.header_img {
+  padding-top: 1em;
+}
+
+.header_img img {
+  height: var(--image_height);
+  width: var(--image_width);
+  border: var(--image_border_px) solid var(--image_border_color);
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.header_text h1 {
+  color: var(--title_color);
+  font-size: 2em;
+}
+
+.header_text h2 {
+  color: var(--description_color);
+  font-size: 1.5em;
+}
+
+/* Social Media Icons Codes */
+
+.header_svg_list {
+  padding-top: 1em;
+}
+
+.header_svg_item {
+  width: 2.1em;
+  height: 2.1em;
+  cursor: pointer;
+}
+
+.header_svg_item:hover {
+  transform: scale(1.10);
+  transition: 0.10s ease;
+}
+
+.header_svg_item + .header_svg_item {
+  margin-left: 1em;
+}
+
+.header_svg_item svg {
+  fill: var(--svg_color);
+}
+
+/* Menu Codes */
+
+#header_nav_menu_item_1 {
+  color: var(--menu_active_text_color);
+}
+
+#header_nav_menu_item_2,
+#header_nav_menu_item_3 {
+  color: var(--menu_text_color);
+}
+
+
+.header_nav_menu_list {
+  padding-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.header_nav_menu_item {
+  color: var(--menu_text_color);
+  background-color: var(--menu_background_color);
+  text-align: center;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: 0.10s ease;
+  font-size: 1.1em;
+}
+
+.header_nav_menu_item + .header_nav_menu_item {
+  margin-left: 0.4em;
+}
+
+/* Menu Container Codes */
+
+main {
+  margin-bottom: auto;
+}
+
+#main_section_container_2, #main_section_container_3 {
+ display: none;
+}
+
+.main_a_item {
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.main_text_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--button_text_color);
+  background-color: var(--button_background_color);
+  width: 41em;
+  margin-top: 1em;
+  padding: 0.8em;
+  border-radius: 0.3em;
+  min-height: 3.7em;
+  text-align: center;
+}
+
+.main_button_item {
+  color: var(--button_text_color);
+  background-color: var(--button_background_color);
+  width: 41em;
+  border-radius: 1em;
+  min-height: 3.7em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main_small_button_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.main_small_a_item {
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.main_small_a_item + .main_small_a_item {
+  margin-left: 10px;
+}
+
+.main_small_button_item:hover,
+.main_button_item:hover {
+  color: var(--button_text_hover_color);
+  transform: scale(1.02);
+  transition: 0.10s ease;
+}
+
+.main_small_button_item {
+  color: var(--button_text_color);
+  background-color: var(--button_background_color);
+  width: calc(41em / 2 - 5px);
+  border-radius: 1em;
+  min-height: 3.7em;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Footer Codes */
+
+.footer_div_item {
+  color: var(--footer_text_color);
+  background: var(--footer_background_color);
+  padding: 1em;
+  margin-top: 1.5em;
+}
+
+.footer_a_item {
+  color: var(--footer_link_text_color);
+  text-decoration: none;
+}
+
+/* Responsive Codes */
+
+@media (max-width: 768px) { 
+  .main_text_item {
+    width: 92vw;
+  }
+
+  .main_small_button_item {
+    width: calc(92vw / 2 - 5px);;
+  }
+
+  .main_button_item {
+    width: 92vw;
+  }
+  
+  .header_h_item {
+    width: 92vw;
+    text-align: center;
+  }
+  
+}
+</style>
+  </head>
+  <body>
+
+    <header>
+    <!-- Logo, Title and Description Codes Start -->
+      <div class="header_img flex_column_center">
+        <img src="https://ardacarofficial-links-website.pages.dev/img/logo.png" alt="Logo" />
+      </div>
+      <div class="header_text flex_column_center">
+        <h1 class="header_h_item">GABUT🥱</h1>
+        <h2 class="header_h_item">Cari Sesuai Keperluan🥱</h2>
+      </div>
+    <!-- Logo, Title and Description Codes End -->  
+
+    <!-- Social Media Icons Codes Start -->
+      <div class="header_svg_list flex_row_center">
+        <!-- Icon 1 Codes -->
+        <div class="header_svg_item">
+          <a href="  https://open.spotify.com/intl-id/track/5Ga0d9UIwSVIKM2ie2zNqg" target="_blank" rel="nofollow">
+            <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" >
+              <path d="M18,10.561a.494.494,0,0,1-.245-.065,15.2,15.2,0,0,0-10.95-1.55.5.5,0,0,1-.232-.973A16.2,16.2,0,0,1,18.25,9.626a.5.5,0,0,1-.247.935Z"></path><path d="M16.646,13.632a.5.5,0,0,1-.249-.066,12.459,12.459,0,0,0-9.121-1.292.5.5,0,1,1-.237-.971A13.458,13.458,0,0,1,16.9,12.7a.5.5,0,0,1-.25.933Z"></path><path d="M15.312,16.583a.5.5,0,0,1-.251-.068,9.777,9.777,0,0,0-7.295-1.033.5.5,0,0,1-.245-.97,10.768,10.768,0,0,1,8.043,1.139.5.5,0,0,1-.252.932Z"></path><path d="M12,23A11,11,0,1,1,23,12,11.013,11.013,0,0,1,12,23ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"></path>
+            </svg>
+          </a>
+        </div>
+        <!-- Icon 2 Codes -->
+        <div class="header_svg_item"> <a href="https://wa.me/6281238604771" target="_blank" rel="nofollow"> <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" ><g><path d="M18.8,14.634a1.361,1.361,0,0,0-.645-.477l-.165-.081c-.018-.009-1.845-.917-2.208-1.049a.983.983,0,0,0-1.3.349c-.177.266-.721.914-.918,1.2a.409.409,0,0,1-.125-.049c-.058-.028-.137-.063-.233-.105a7.636,7.636,0,0,1-2.2-1.387,12.737,12.737,0,0,1-1.683-2.008.766.766,0,0,1,.086-.093c.1-.1.223-.248.342-.392l.159-.191a2.247,2.247,0,0,0,.338-.538l.044-.09a1.064,1.064,0,0,0-.026-1c-.057-.116-.35-.835-.616-1.481L9.31,6.408a1.123,1.123,0,0,0-1.146-.849c-.192-.01-.412-.012-.63-.012a1.724,1.724,0,0,0-1.269.62A3.989,3.989,0,0,0,5.087,9.074a6.653,6.653,0,0,0,1.435,3.631,14.178,14.178,0,0,0,5.546,4.857,18.659,18.659,0,0,0,1.846.682,4.476,4.476,0,0,0,1.373.208,5.741,5.741,0,0,0,.84-.065,3.729,3.729,0,0,0,2.526-1.826,2.85,2.85,0,0,0,.142-1.927Zm-1.084,1.59A2.852,2.852,0,0,1,15.978,17.4a3.837,3.837,0,0,1-1.762-.107,17.989,17.989,0,0,1-1.752-.647,13.168,13.168,0,0,1-5.122-4.512l-.071-.1A5.548,5.548,0,0,1,6.087,9.074a3.06,3.06,0,0,1,.974-2.295.654.654,0,0,1,.473-.232c.2,0,.4,0,.579.011h0l.133-.01a.685.685,0,0,1,.139.244l.341.827c.279.68.592,1.438.647,1.548.04.079.033.091.026.1l-.048.1a1.323,1.323,0,0,1-.2.327L8.98,9.9c-.1.117-.19.234-.275.318a.957.957,0,0,0-.217,1.249,9.938,9.938,0,0,0,1.854,2.307,8.645,8.645,0,0,0,2.464,1.558c.076.034.138.06.184.083a.969.969,0,0,0,1.282-.2,9.857,9.857,0,0,0,.993-1.306,1,1,0,0,1,.17.051c.229.084,1.6.75,2.1,1l.177.087c.067.032.144.069.2.1A3.126,3.126,0,0,1,17.711,16.224Z"></path><path d="M12,1A11,11,0,0,0,2.792,18.014l-.974,3.711a.5.5,0,0,0,.61.61l3.779-.991A11,11,0,1,0,12,1Zm0,21a9.961,9.961,0,0,1-5.437-1.614.493.493,0,0,0-.4-.064L3,21.151l.814-3.1a.5.5,0,0,0-.071-.41A10,10,0,1,1,12,22Z"></path></g></svg> </a> </div>
+        <!-- Icon 3 Codes -->
+        <div class="header_svg_item">
+          <a href="https://www.instagram.com/hlimm14?igsh=dHJ4Y2pmc2F6Zmky" target="_blank" rel="nofollow">
+            <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+              <path d="M21.938,7.71a7.329,7.329,0,0,0-.456-2.394,4.615,4.615,0,0,0-1.1-1.694,4.61,4.61,0,0,0-1.7-1.1,7.318,7.318,0,0,0-2.393-.456C15.185,2.012,14.817,2,12,2s-3.185.012-4.29.062a7.329,7.329,0,0,0-2.394.456,4.615,4.615,0,0,0-1.694,1.1,4.61,4.61,0,0,0-1.1,1.7A7.318,7.318,0,0,0,2.062,7.71C2.012,8.814,2,9.182,2,12s.012,3.186.062,4.29a7.329,7.329,0,0,0,.456,2.394,4.615,4.615,0,0,0,1.1,1.694,4.61,4.61,0,0,0,1.7,1.1,7.318,7.318,0,0,0,2.393.456c1.1.05,1.472.062,4.29.062s3.186-.012,4.29-.062a7.329,7.329,0,0,0,2.394-.456,4.9,4.9,0,0,0,2.8-2.8,7.318,7.318,0,0,0,.456-2.393c.05-1.1.062-1.472.062-4.29S21.988,8.814,21.938,7.71Zm-1,8.534a6.351,6.351,0,0,1-.388,2.077,3.9,3.9,0,0,1-2.228,2.229,6.363,6.363,0,0,1-2.078.388C15.159,20.988,14.8,21,12,21s-3.159-.012-4.244-.062a6.351,6.351,0,0,1-2.077-.388,3.627,3.627,0,0,1-1.35-.879,3.631,3.631,0,0,1-.879-1.349,6.363,6.363,0,0,1-.388-2.078C3.012,15.159,3,14.8,3,12s.012-3.159.062-4.244A6.351,6.351,0,0,1,3.45,5.679a3.627,3.627,0,0,1,.879-1.35A3.631,3.631,0,0,1,5.678,3.45a6.363,6.363,0,0,1,2.078-.388C8.842,3.012,9.205,3,12,3s3.158.012,4.244.062a6.351,6.351,0,0,1,2.077.388,3.627,3.627,0,0,1,1.35.879,3.631,3.631,0,0,1,.879,1.349,6.363,6.363,0,0,1,.388,2.078C20.988,8.841,21,9.2,21,12S20.988,15.159,20.938,16.244Z"></path>
+              <path d="M17.581,5.467a.953.953,0,1,0,.952.952A.954.954,0,0,0,17.581,5.467Z"></path>
+              <path d="M12,7.073A4.927,4.927,0,1,0,16.927,12,4.932,4.932,0,0,0,12,7.073Zm0,8.854A3.927,3.927,0,1,1,15.927,12,3.932,3.932,0,0,1,12,15.927Z"></path>
+            </svg>
+          </a>
+        </div>
+        <!-- Icon 4 Codes -->
+        <div class="header_svg_item"> <a href="https://www.tiktok.com/@hlimm141?_r=1&_t=ZS-97a0HBG7ztd" target="_blank" rel="nofollow"> <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" ><path d="M9.37,23.5a7.468,7.468,0,0,1,0-14.936.537.537,0,0,1,.538.5v3.8a.542.542,0,0,1-.5.5,2.671,2.671,0,1,0,2.645,2.669.432.432,0,0,1,0-.05V1a.5.5,0,0,1,.5-.5h3.787a.5.5,0,0,1,.5.5A4.759,4.759,0,0,0,21.59,5.76a.5.5,0,0,1,.5.5L22.1,10a.533.533,0,0,1-.519.515,9.427,9.427,0,0,1-4.741-1.268v6.789A7.476,7.476,0,0,1,9.37,23.5ZM8.908,9.585a6.466,6.466,0,1,0,6.93,6.447V8.326a.5.5,0,0,1,.791-.407A8.441,8.441,0,0,0,21.1,9.5l-.006-2.76A5.761,5.761,0,0,1,15.859,1.5H13.051V16.032a.458.458,0,0,1,0,.053,3.672,3.672,0,1,1-4.14-3.695Z"></path></svg> </a> </div>
+            </svg>
+          </a>
+        </div>
+      </div>
+    <!-- Social Media Icons Codes End -->
+
+    <!-- Menu Codes Start -->
+      <nav>
+        <ul class="header_nav_menu_list flex_no_wrap_row_center">
+         
+
+
+        </ul>
+      </nav>
+    <!-- Menu Codes End -->
+
+    </header>
+    <main>
+      <!-- Menu Container 1 Codes Start -->
+      <section id="main_section_container_1" class="flex_column_center">
+        <!-- Menu Text Item -->
+        <div class="main_text_item">
+          <p></p>
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Component Settings</button>
+          </a>
+          <a class="main_small_a_item" href="" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Design Settings</button>
+          </a>
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Report a Bug or Suggestion</button>
+          </a>
+          <a class="main_small_a_item" href="" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Support the Project</button>
+          </a>
+        </div>
+        <!-- Menu Item -->
+   
+        <!-- Menu Item -->
+        <a class="main_a_item" href="" target="_blank" rel="nofollow">
+          <button class="main_button_item">Project Creator</button>
+        </a>
+      </section>
+      <!-- Menu Container 1 Codes End -->
+
+      <!-- Menu Container 2 Codes Start -->
+      <section id="main_section_container_2" class="flex_column_center">
+        <!-- Menu Text Item -->
+        <div class="main_text_item">
+         
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 2 Small Item</button>
+          </a>
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 2 Small Item</button>
+          </a>
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 2 Small Item</button>
+          </a>
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 2 Small Item</button>
+          </a>
+        </div>
+        <!-- Menu Item -->
+        <a class="main_a_item" href="#link" target="_blank" rel="nofollow">
+          <button class="main_button_item">Menu 2 Item</button>
+        </a>
+        <!-- Menu Item -->
+        <a class="main_a_item" href="#link" target="_blank" rel="nofollow">
+          <button class="main_button_item">Menu 2 Item</button>
+        </a>
+      </section>
+      <!-- Menu Container 2 Codes End -->
+
+      <!-- Menu Container 3 Codes Start -->
+      <section id="main_section_container_3" class="flex_column_center">
+        <!-- Menu Text Item -->
+        <div class="main_text_item">
+          
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 3 Small Item</button>
+          </a>
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 3 Small Item</button>
+          </a>
+        </div>
+        <!-- Menu Small Item -->
+        <div class="main_small_button_list">
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 3 Small Item</button>
+          </a>
+          <a class="main_small_a_item" href="#link" target="_blank" rel="nofollow">
+            <button class="main_small_button_item">Menu 3 Small Item</button>
+          </a>
+        </div>
+        <!-- Menu Item -->
+        <a class="main_a_item" href="#link" target="_blank" rel="nofollow">
+          <button class="main_button_item">Menu 3 Item</button>
+        </a>
+        <!-- Menu Item -->
+        <a class="main_a_item" href="#link" target="_blank" rel="nofollow">
+          <button class="main_button_item">Menu 3 Item</button>
+        </a>
+      </section>
+      <!-- Menu Container 3 Codes End -->
+    </main>
+    <footer>
+      <!-- Footer Codes Start -->
+      <div class="footer_div_item flex_row_center">
+        <a class="footer_a_item" href="#link">ABD.HALIM</a>&nbsp;| Copyright ©2026
+      </div>
+    </footer>
+      <!-- Footer Codes End -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
